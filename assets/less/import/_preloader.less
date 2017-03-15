@@ -6,3 +6,43 @@ Preloader
 	text-align: center;
 	background: @white;
 }
+
+.loader{
+	.size(100%, 100%);
+	position: fixed;
+	top:0; left:0;
+    text-align: center;
+    background: @red;
+    transition: .2s;
+	z-index: 9000;
+	.hidden();
+	&.on{
+		.visible();
+	}
+}
+
+.resp-mess{
+	display: none;
+	@media only screen and (max-width: 768px) and (orientation: landscape){
+		display: block;
+		position: absolute;
+		left:0;
+		top: 0;
+		z-index: 1000;
+		width: 100%;
+		height: 100vh;
+		background: @white;
+	}
+	h3{
+		position: absolute;
+	    top: 50%;
+	    left: 0;
+	    right: 0;
+	    display: block;
+	    text-align: center;
+	    font-weight: 100;
+	    transform: translateY(-50%);
+	    font-family: 'CircBook';
+	    color: @black;
+	}
+}

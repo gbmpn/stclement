@@ -4,21 +4,689 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimal-ui, shrink-to-fit=no">
-		
-		<title>biggie</title>
-		
+		<title>St Clements</title>
 		<!--[if lt IE 9]>
 			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-
 		<link href="favicon.ico" rel="shortcut icon">
 		<link rel="stylesheet" href="/build/app.min.css">
 	</head>
 	<body>
+
+		<div class="loader on"></div>
+		<div class="resp-mess">
+			<h3>
+				Please use your device in portrait mode.
+			</h3>
+		</div>
+
+		<!-- Header -->
+		<header class="no-pointer">
+			<div class="device-content">
+				<div class="row">
+					<div class="column col-3">
+						<a href="/" class="nav-item logo">St Clements</a>
+					</div>
+					<nav class="_furniture not-mobile">
+						<div class="column col-3">
+							<span class="js-f-container">Furniture</span>
+							<ul class="_furnitures js-furniture">
+								<li>
+		                            <a class="nav-item" href="/furniture/coffee-table">Coffee Table</a>
+		                            <div class="modal _frntr"><span>Coffee Table</span></div>
+		                        </li>
+		                        <li><a class="nav-item" href="/furniture/side-table">Side Table</a>
+		                            <div class="modal _frntr"><span>Side Table</span></div>
+		                        </li>
+		                        <li><a class="nav-item" href="/furniture/dining-table">Dining Table</a>
+		                            <div class="modal _frntr"><span>Dining Table</span></div>
+		                        </li>
+		                        <li><a class="nav-item" href="/furniture/sofa">Sofa</a>
+		                            <div class="modal _frntr"><span>Sofa</span></div>
+		                        </li>
+		                        <li><a class="nav-item" href="/furniture/armchair">Armchair</a>
+		                            <div class="modal _frntr"><span>Armchair</span></div>
+		                        </li>
+		                        <li><a href="/furniture/bed">Bed</a>
+		                            <div class="modal _frntr"><span>Bed</span></div>
+		                        </li>
+		                        <li><a class="nav-item" href="/furniture/decor">Decor</a>
+		                            <div class="modal _frntr"><span>Decor</span></div>
+		                        </li>
+							</ul>
+						</div>
+					</nav>
+					<nav class="_main not-mobile">
+						<div class="column col-1">
+							<a href="/about" class="nav-item">About</a>
+							<a href="/glossary" class="nav-item allproducts">All Products</a>
+						</div>
+						<div class="column col-1">
+							<a href="/contact" class="nav-item">Contact</a>
+						</div>
+						<div class="column col-1">
+							<a href="/projects" class="nav-item">Projects</a>
+						</div>
+						<div class="column col-2">
+							<span class="searchTrigger">Search</span>
+							<input type="text" class="search" placeholder="Enter Your Search" onkeyup="inputKeyUp(event)">
+							<button class="submit"></button>
+						</div>
+						<div class="column col-1">
+							<span class="js-enquire">Enquire</span>
+						</div>
+					</nav>
+				</div>
+				<!-- <div class="menu-toggle js-menu-toggle only-mobile">
+					<span class="bar top"></span>
+					<span class="bar middle"></span>
+					<span class="bar bottom"></span>
+			    </div> -->
+			</div>
+		</header>
+
+		<div class="menu-toggle js-menu-toggle">
+			<span class="bar top"></span>
+			<span class="bar bottom"></span>
+	    </div>
+	    <div id="menu" class="mobile-menu">
+	    	<div class="device-content">
+	    		<div class="row">
+	    			<div class="column col-6 prlx">
+	    				<nav class="_main">
+							<a href="/about" class="nav-item">About</a>
+							
+				
+							<a href="/contact" class="nav-item">Contact</a>
+						
+							<a href="/projects" class="nav-item">Projects</a>
+					
+							<span class="searchTrigger">Search</span>
+							<input type="text" class="search" placeholder="Enter Your Search" onkeyup="inputKeyUp(event)">
+							<button class="submit"></button>
+					
+							<!-- <span class="js-enquire">Enquire</span> -->
+				
+						</nav>
+	    			</div>
+	    			<div class="column col-6 prlx">
+	    				<nav class="_furniture">
+							<span class="js-f-container">Furniture</span>
+							<ul class="_furnitures js-furniture">
+								<li>
+		                            <a class="nav-item" href="/furniture/coffee-table">Coffee Table</a>
+		                        </li>
+		                        <li><a class="nav-item" href="/furniture/side-table">Side Table</a>
+		                        </li>
+		                        <li><a class="nav-item" href="/furniture/dining-table">Dining Table</a>
+		                        </li>
+		                        <li><a class="nav-item" href="/furniture/sofa">Sofa</a>
+		                        </li>
+		                        <li><a class="nav-item" href="/furniture/armchair">Armchair</a>
+		                        </li>
+		                        <li><a href="/furniture/bed">Bed</a>
+		                        </li>
+		                        <li><a class="nav-item" href="/furniture/decor">Decor</a>
+		                        </li>
+		                        <li><a href="/glossary" class="nav-item allproducts">All Products</a></li>
+							</ul>
+						</nav>
+	    			</div>
+	    			
+	    		</div>
+		    	
+	    	</div>
+	    </div>
+		
+
+		<!-- <section class="intro loader">
+            <div class="device-content">  
+                <div class="row">
+                    <div class="column col-1"><span class="fix"></span></div>
+                    <div class="column col-10">
+                        <img src="/images/bench.svg" alt="logo">
+                    </div>
+                </div>  
+            </div>
+        </section> -->
+		
+		<!-- search -->
+		<div class="searchContainer">
+			<div class="innerScroller">
+		        <!-- logo -->
+		        <section class="intro _detail">
+		            <div class="device-content">  
+		                <div class="row">
+		                    <div class="column col-10">
+		                        <span class="query">Joe</span>
+		                    </div>
+		                </div>  
+		            </div>
+		        </section>
+		     
+
+		        <!-- featured products -->
+		        <section class="results">
+		        	<!-- if no results -->
+		        	<!-- <div class="device-content is-null">
+		        		<p>No Results Found</p>
+		        	</div> -->
+
+		        	<!-- if no results -->
+		            <div class="device-content is-populated">
+		                <!-- 3 results per row -->
+		                <p>Search Results (29)</p>
+		                <div class="row">
+		                    <div class="column col-3">
+		                        <a href="/furniture/joe-loveseat">
+		                            <figure class="">
+		                                <div class="image _1x1">
+		                                    <img src="/images/home/1.jpg" class="fit" alt="">
+		                                </div>
+		                                <figcaption>
+		                                    <p>Joe Armchair</p>
+		                                </figcaption>
+		                            </figure>
+		                        </a>
+		                    </div>
+		                    
+		                    <div class="column col-3">
+		                        <a href="/furniture/joe-loveseat">
+		                            <figure>
+		                                <div class="image _1x1">
+		                                    <img src="/images/home/2.jpg" class="fit" alt="">
+		                                </div>
+		                                <figcaption>
+		                                    <p>Joe Couch</p>
+		                                </figcaption>
+		                            </figure>
+		                        </a>
+		                    </div>
+
+		                    <div class="column col-3">
+		                        <a href="/furniture/joe-loveseat">
+		                            <figure>
+		                                <div class="image _1x1">
+		                                    <img src="/images/home/3.jpg" class="fit" alt="">
+		                                </div>
+		                                <figcaption>
+		                                    <p>Joe Ottoman</p>
+		                                </figcaption>
+		                            </figure>
+		                        </a>
+		                    </div>
+
+		                </div> 
+
+		                <!-- 3 results per row -->
+		                <div class="row">
+		                    <div class="column col-3">
+		                        <a href="/furniture/joe-loveseat">
+		                            <figure>
+		                                <div class="image _1x1">
+		                                    <img src="/images/home/4.jpg" class="fit" alt="">
+		                                </div>
+		                                <figcaption>
+		                                    <p>Joe Love Seat</p>
+		                                </figcaption>
+		                            </figure>
+		                        </a>
+		                    </div>
+		                    
+		                    <div class="column col-3">
+		                        <a href="/furniture/joe-loveseat">
+		                            <figure>
+		                                <div class="image _1x1">
+		                                    <img src="/images/home/5.jpg" class="fit" alt="">
+		                                </div>
+		                                <figcaption>
+		                                    <p>Joe Armchair</p>
+		                                </figcaption>
+		                            </figure>
+		                        </a>
+		                    </div>
+
+		                    <div class="column col-3">
+		                        <a href="/furniture/joe-loveseat">
+		                            <figure>
+		                                <div class="image _1x1">
+		                                    <img src="/images/home/6.jpg" class="fit" alt="">
+		                                </div>
+		                                <figcaption>
+		                                    <p>Joe Ottoman</p>
+		                                </figcaption>
+		                            </figure>
+		                        </a>
+		                    </div>
+
+		                </div>
+		                 <!-- 3 results per row -->
+		                <div class="row">
+		                    <div class="column col-3">
+		                        <a href="/furniture/joe-loveseat">
+		                            <figure>
+		                                <div class="image _1x1">
+		                                    <img src="/images/home/7.jpg" class="fit" alt="">
+		                                </div>
+		                                <figcaption>
+		                                    <p>Joe Matress</p>
+		                                </figcaption>
+		                            </figure>
+		                        </a>
+		                    </div>
+		                    
+		                    <div class="column col-3">
+		                        <a href="/furniture/joe-loveseat">
+		                            <figure>
+		                                <div class="image _1x1">
+		                                    <img src="/images/home/1.jpg" class="fit" alt="">
+		                                </div>
+		                                <figcaption>
+		                                    <p>Joe Armchair</p>
+		                                </figcaption>
+		                            </figure>
+		                        </a>
+		                    </div>      
+						</div>
+
+		            </div>
+		        </section>
+
+
+		        <!-- footer -->
+		        <footer class="w_text">
+		            <div class="device-content dark">
+		                <div class="row">
+		                    <div class="column col-3">
+		                        <p>68 France Street South, <br>
+		                         Eden Terrace, 1011 Auckland</p>
+		                        <nav>
+		                            <a href="/">Terms & Conditions</a>
+		                            <a href="/">Privacy Policy</a>
+		                        </nav>
+		                    </div>
+		                    <div class="column col-3">
+		                        <p>Mon – Fri: 10.00am – 5.30pm<br>
+		                         Sat: 10.00am – 4.00pm</p>
+		                         <nav>
+		                            <span>Follow</span>
+		                            <a href="">Instagram</a>
+		                            <a href="">Facebook</a>
+		                            <a href="">Subscribe</a> 
+		                         </nav>
+		                    </div>
+		                    <div class="column col-3">
+		                        <nav class="contact">
+		                            <a href="mailto:info@stclements.co.nz" target="_blank" class="no-route">info@stclements.co.nz</a>
+		                            <a href="tel:+64 21 969 059" target="_blank" class="no-route">+64 21 969 059</a>
+		                        </nav>
+		                    </div>
+		                </div>
+		            </div>
+		        </footer>
+		    </div>
+		</div>
+		
+		<!-- enquire -->
+		<div class="enquireContainer">
+			<div class="device-content">
+				<span class="js-close-enquire">
+					<svg class="svg-icon" viewBox="0 0 83.2 83.2">
+						<line class="st0" x1="71" y1="12.2" x2="12.2" y2="71"/>
+						<line class="st0" x1="71" y1="71" x2="12.2" y2="12.2"/>
+					</svg>
+					Close
+	            </span>
+				<div class="row">
+					<div class="column col-12">
+						<h2>Enquiries</h2>
+					</div>
+					
+				</div>
+				<div class="row _bottom">
+					<div class="column col-7">
+						<p>If you want to enquire about mulitple products, select the  rst product in the form, then let us know what the others are by naming them in the message section.</p>
+					</div>
+					<div class="column col-12">
+						<form action="">
+							<input type="text" name"firstname" placeholder="First Name">
+							<input type="text" name"lastname" placeholder="Last Name">
+							<input type="text" name"mail" placeholder="Email">
+							<input type="text" name"armchair" placeholder="Armchair">
+							<input type="text" name"joeloveseat" placeholder="Joe Loveseat">
+							<textarea name="message" placeholder="Message" rows="4"></textarea>
+							<button>Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- fullscreen -->
+		<div class="fullscreen">
+
+    		<div class="device-content">
+    			<span class="js-close-fullscreen">
+					<svg class="svg-icon" viewBox="0 0 83.2 83.2">
+						<line class="st0" x1="71" y1="12.2" x2="12.2" y2="71"/>
+						<line class="st0" x1="71" y1="71" x2="12.2" y2="12.2"/>
+					</svg>
+					Close
+	            </span>
+    		</div>
+            <figure class="effect-fade landscape parentContainer"></figure>
+	    </div>
+
+		<!-- Gallery -->
+	    <div id="gallery-image">
+			<div class="counter">
+				<span class="current"></span> / <span class="total"></span>
+			</div>
+			<div class="device-content">
+    			<span class="js-close-fullscreen">
+					<svg class="svg-icon" viewBox="0 0 83.2 83.2">
+						<line class="st0" x1="71" y1="12.2" x2="12.2" y2="71"/>
+						<line class="st0" x1="71" y1="71" x2="12.2" y2="12.2"/>
+					</svg>
+					Close
+	            </span>
+    		</div>
+			<div id="carousel"></div>
+		</div>
+
+		<div class="pongTrigger"></div>
 		<div id="js-view" class="page-view"></div>
-		<footer>
-			<p>Made w/ <a href="https://github.com/bigwheel-framework/bigwheel" target="_blank">Bigwheel</a>. Checkout on <a href="https://github.com/BaptisteBriel/biggie" target="_blank">Github</a>.</p>
-		</footer>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDshkoM9sZGCaji9CL0_q_3IbebSOeQAow"></script>
 		<script src="/build/app.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.2/p5.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.2/addons/p5.dom.js"></script>
+		<script>
+			var f_container = document.querySelector('.js-furniture'),
+				f_holder = document.querySelector('.modal_holder'),
+				header = document.querySelector('header'),
+				allproducts = document.querySelector('.allproducts'),
+				fnav_trigger = document.querySelector('.js-f-container'),
+				searchContainer = document.querySelector('.searchContainer'),
+				tofade = document.querySelectorAll('.tofade'),
+
+				header = document.querySelector('header'),
+				searchTrigger = document.querySelector('.search'),
+				st = 0, i;
+
+
+				//window.addEventListener("keypress", openSearch, false);
+				//searchTrigger.addEventListener('keyup', inputKeyUp);
+
+
+				function openSearch(){
+					searchContainer.classList.add('is-on');
+					document.body.classList.add('is-black');
+					header.classList.remove('_white')
+					header.classList.add('white')
+					header.classList.remove('_black')
+					
+					document.body.classList.add('is-search');
+					
+				}
+
+
+				function inputKeyUp(e) {
+				    e.which = e.which || e.keyCode;
+				    if(e.which == 13) {
+				      	openSearch();
+				    }
+
+				}
+
+		</script>
+
+		<script>
+		//PONG
+
+
+
+            // global variables our entire game needs
+var player;
+var enemy;
+var ball;
+var playerScore;
+var enemyScore;
+
+/*
+* setup() is called at start ONCE.
+*
+* We can set up our global variables to be the values 
+* we need them to be at the start of the game.
+*/
+
+
+
+var pongTrigger = document.querySelector('.pongTrigger'),
+	canvas = document.querySelector('#defaultCanvas0');
+
+
+	pongTrigger.addEventListener('click', openPong)
+	
+function openPong() {
+	canvas.classList.add('on');
+	loop();
+
+   	canvas.addEventListener('click', closePong) 	
+ }
+
+function closePong() {
+ 	canvas.classList.remove('on');
+	noLoop();
+
+}		
+      	
+  
+function setup() {
+	init();
+	noLoop();
+	 
+}	
+
+function init() {
+    createCanvas(window.innerWidth, window.innerHeight);
+
+    enemy = new Enemy();
+    player = new Player();
+    ball = new Ball();
+
+    playerScore = 0;
+    enemyScore = 0;
+}
+
+/*
+* draw() is called each frame. Use it to update each object then draw each object.
+*/
+function draw() {
+    clear(); // erases prevouis drawing
+    background(0);
+
+    ball.update();
+    player.update();
+    enemy.update();
+
+    player.draw();
+    enemy.draw();
+    ball.draw();
+
+    // displaying score 
+    textSize(32);
+    fill(255);
+    text(playerScore, (width / 2) - 80, 50);
+    text(enemyScore, (width / 2) + 80, 50);
+}
+
+/*
+* Ball() creates a new ball object.
+*/
+function Ball() {
+    this.size = 20;
+    this.x = (width / 2) - 10;
+    this.y = (height / 2) - 10;
+    this.moving = false;
+    this.gameInPlay = true;
+    this.xVel = 4;
+    this.yVel = 4;
+   
+    /*
+    * Ball.update() updates the ball by moving it, bouncing it 
+    * or giving score. 
+    */
+    this.update = function() {
+        /*
+        * the ball is not moving by default. this lets us choose a
+        * random direction for the ball to move at the start.
+        */
+        if (!this.moving) {
+            var outcome = random();
+            if (outcome > 0.5) {
+                this.xVel = -this.xVel;
+            }
+            outcome = random();
+            if (outcome > 0.5) {
+                this.yVel = -this.yVel;
+            }
+
+            this.moving = true;
+        }
+
+        if (this.gameInPlay) {
+            /*
+            * Collisions with each side of the game canvas.
+            */
+            if (this.y > height - 10) {
+                this.y = height - 10;
+                this.yVel = -this.yVel;
+            }
+            if (this.y < 0) {
+                this.y = 0;
+                this.yVel = -this.yVel;
+            }
+            if (this.x > width - 10) {
+                this.x = width - 10;
+                this.gameInPlay = false;
+                playerScore++;
+            }
+            if (this.x < 0) {
+                this.x = (width / 2) - 10;
+                this.gameInPlay = false;
+                enemyScore++;
+            }
+            
+            /*
+            * Collision with player
+            */
+            if (this.x < player.x + 15 && this.x + this.size > player.x && this.y < player.y + 70 && this.size + this.y > player.y) {
+                this.x = player.x + 30;
+                this.xVel -= 3;
+                this.xVel = -this.xVel;
+            }
+
+            /*
+            * Collision with enemy
+            */
+            if (this.x < enemy.x + 15 && this.x + this.size > enemy.x && this.y < enemy.y + 70 && this.size + this.y > enemy.y) {
+                this.x = enemy.x - this.size;
+                this.xVel += 3;
+                this.xVel = -this.xVel;
+            }
+
+            /* 
+            * moving the ball
+            */
+            this.x += this.xVel;
+            this.y += this.yVel;
+        } 
+        
+        /*
+        * When a point is scored, we need to reset the game
+        */
+        else {
+            this.x = (width / 2) - 10;
+            this.y = (height / 2) - 10;
+            this.moving = false;
+            this.gameInPlay = true;
+            this.xVel = 4;
+            this.yVel = 4;
+            enemy.speed = 5;
+        }
+    }
+
+    /*
+    * drawing the ball
+    */
+    this.draw = function() {
+        fill(255);
+        ellipse(this.x, this.y, this.size, this.size);
+    }
+}
+
+/*
+* Enemy() creates a new enemy object
+*/
+function Enemy() {
+    this.x = width - 35;
+    this.y = height / 2;
+    this.w = 15;
+    this.h = 70;
+    this.speed = 8;
+   
+    /* 
+    * Enemy.update() updates the enemy by moving it up or
+    * down in relation to the balls position.
+    */
+    this.update = function() {
+        if (ball.x > width / 2) {
+            if (ball.y < this.y + 35) {
+                this.y -= this.speed;
+            }
+            if (ball.y > this.y + 35) {
+                this.y += this.speed;
+            }
+        }
+    }
+
+    /*
+    * drawing the enemy
+    */
+    this.draw = function() {
+        fill(255);
+        rect(this.x, this.y, this.w, this.h);
+    }
+}
+
+/*
+* Player() creates a new player object
+*/
+function Player() {
+    this.x = 20;
+    this.y = height / 2;
+    this.w = 15;
+    this.h = 70;
+   
+    /*
+    * Player.update() will move the player up or 
+    * down in relation to the mouseY position.
+    */
+    this.update = function() {
+        this.y = mouseY;
+    }
+   
+    /*
+    * draws the player
+    */
+    this.draw = function() {
+        fill(255);
+        rect(this.x, this.y, this.w, this.h);
+    }
+}
+
+
+		</script>
+	
 	</body>
 </html>

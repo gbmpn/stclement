@@ -1,41 +1,190 @@
 /* -----
 12 columns Responsive Grid
 ----- */
-.row {
-  zoom: 1;
-  &:before, &:after {
-    content:'\0020';
-    display:block;
-    overflow:hidden;
-    visibility:hidden;
-    width:0;
-    height:0
-  }
-  &:after {clear:both;}
-}
+// .row {
+//   zoom: 1;
+//   &:before, &:after {
+//     content:'\0020';
+//     display:block;
+//     overflow:hidden;
+//     visibility:hidden;
+//     width:0;
+//     height:0
+//   }
+//   &:after {clear:both;}
+// }
 .device-content{
   position: relative;
-  width: 1200px;
+  // left: 50px;
+  // right: 50px;
+  margin: 0 auto;
+  //width: 1200px;
+  //width:90%;
   .center-block();
+    width: 100%;
+    padding: 0 50px;
+    @media @mobile {
+      padding: 0 15px;
+    }
 }
-.column{
-  display: block;
-  float: left;
-}
-.col-1{width:@col_1}
-.col-2{width:@col_2}
-.col-3{width:@col_3}
-.col-4{width:@col_4}
-.col-5{width:@col_5}
-.col-6{width:@col_6}
-.col-7{width:@col_7}
-.col-8{width:@col_8}
-.col-9{width:@col_9}
-.col-10{width:@col_10}
-.col-11{width:@col_11}
-.col-12{width:@col_12}
+// .column{
+//   display: block;
+//   float: left;
+// }
+// .col-1{width:@col_1}
+// .col-2{width:@col_2}
+// .col-3{width:@col_3}
+// .col-4{width:@col_4}
+// .col-5{width:@col_5}
+// .col-6{width:@col_6}
+// .col-7{width:@col_7}
+// .col-8{width:@col_8}
+// .col-9{width:@col_9}
+// .col-10{width:@col_10}
+// .col-11{width:@col_11}
+// .col-12{width:@col_12}
 img.scale-with-grid{
   width: 100%;
   height: auto;
   display: block;
 }
+
+
+/**
+ * Gridpak Beta LESS
+ *
+ * Generator - http://gridpak.com/
+ * Created by @simplygoodwork
+ */
+
+/* Reusable column setup */
+.mixin-col {
+     border:0px solid rgba(0,0,0,0);
+     float:left;
+     -webkit-box-sizing:border-box;
+     -moz-box-sizing:border-box;
+     box-sizing:border-box;
+     -moz-background-clip:padding-box !important;
+     -webkit-background-clip:padding-box !important;
+     background-clip:padding-box !important;
+}
+.column {
+     .mixin-col;
+}
+
+.mixin-span(@num, @gutter_pc, @gutter_px, @padding, @max_columns) {
+    @one_col: (100% - (@gutter_pc * (@max_columns - 1))) / @max_columns;
+    width:(@one_col * @num) + (@gutter_pc * (@num - 1));
+    border-left-width:@gutter_px;
+    padding:@padding;
+    margin-left:@gutter_pc;
+}
+.mixin-span_first {
+    margin-left:0;
+}
+
+
+
+    /* 1. 12 Column Grid 0px - Infinity
+    -----------------------------------------------------------------------------
+
+    Span 1:    8.33333333333%
+    Span 2:    16.6666666667%
+    Span 3:    25.0%
+    Span 4:    33.3333333333%
+    Span 5:    41.6666666667%
+    Span 6:    50.0%
+    Span 7:    58.3333333333%
+    Span 8:    66.6666666667%
+    Span 9:    75.0%
+    Span 10:    83.3333333333%
+    Span 11:    91.6666666667%
+    Span 12:    100%
+
+    ----------------------------------------------------------------------------- */
+
+  @media screen and (min-width: 0px) {
+        
+        .row {
+          zoom: 1;
+          margin-left:-10px;
+              clear: both;
+          // &:before, &:after {
+          //   content:'\0020';
+          //   display:block;
+          //   overflow:hidden;
+          //   visibility:hidden;
+          //   width:0;
+          //   height:0
+          // }
+          &:after {clear:both;}
+        }
+        
+        .column {
+            border-left-width:10px;
+            padding:0 0px;
+            *{
+              position: relative;
+            }
+
+        }
+
+        /* --- Gridpak variables ---*/
+        @max_columns: 12;
+        @padding: 0 0px;
+        @gutter_px: 10px;
+        @gutter_pc: 0;
+
+
+        
+        
+        /*
+        Add your semantic classnames in alongside their corresponding spans here. e.g.
+
+        .span_3,
+        .my_semantic_class_name {
+            ...
+        }
+
+        */
+        .col-1 {
+            .mixin-span(1, @gutter_pc, @gutter_px, @padding, @max_columns);
+        }
+        .col-2 {
+            .mixin-span(2, @gutter_pc, @gutter_px, @padding, @max_columns);
+        }
+        .col-3 {
+            .mixin-span(3, @gutter_pc, @gutter_px, @padding, @max_columns);
+        }
+        .col-4 {
+            .mixin-span(4, @gutter_pc, @gutter_px, @padding, @max_columns);
+        }
+        .col-5 {
+            .mixin-span(5, @gutter_pc, @gutter_px, @padding, @max_columns);
+        }
+        .col-6 {
+            .mixin-span(6, @gutter_pc, @gutter_px, @padding, @max_columns);
+        }
+        .col-7 {
+            .mixin-span(7, @gutter_pc, @gutter_px, @padding, @max_columns);
+        }
+        .col-8 {
+            .mixin-span(8, @gutter_pc, @gutter_px, @padding, @max_columns);
+        }
+        .col-9 {
+            .mixin-span(9, @gutter_pc, @gutter_px, @padding, @max_columns);
+        }
+        .col-10 {
+            .mixin-span(10, @gutter_pc, @gutter_px, @padding, @max_columns);
+        }
+        .col-11 {
+            .mixin-span(11, @gutter_pc, @gutter_px, @padding, @max_columns);
+        }
+        .col-12 {
+            .mixin-span_first;
+            width:100%;
+        }
+        
+    }
+
+

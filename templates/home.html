@@ -1,18 +1,192 @@
-<div class="js-component-foo"></div>
-<div class="js-component-bar">
-    <div class="js-component-bar-foo"></div>
-    <div class="js-component-bar-foo"></div>
-    <div class="js-component-bar-foo"></div>
-</div>
-<div class="vertical-center">
-    <div class="vertical-el">
-        <p><strong>Home</strong> > <a href="/about">About</a></p>
-        <br>
-        <p style="color: #a9a9a9;">Duplicate sections</p>
-        <p><a href="/section/one">Section 1</a> > <a href="/section/two">Section 2</a></p>
-        <br>
-        <p style="color: #a9a9a9;">Sub sections</p>
-        <p><a href="/gallery">Gallery</a></p>
-        <p><a href="/gallery/one">Gallery 1</a> > <a href="/gallery/two">Gallery 2</a></p>
+<span class="meta-tile" data-title="St Clement — Home"></span>
+<div class="modal_holder"></div>
+
+<div class="scrollContainer">
+    <div class="innerScroller">
+        <!-- logo -->
+        <section class="intro">
+            <div class="device-content">  
+                <div class="row">
+                    <div class="column col-1"><span class="fix"></span></div>
+                    <div class="column col-10">
+                        <div class="logowrapper">
+                            <img class="logo" src="/images/logo.svg" alt="logo">
+                            <img class="bench" src="/images/bench.svg" alt="logo">
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </section>
+        <!-- carousel -->
+        <div class="hero">
+            <div class="swiper-container _main">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="carousel-cell text">
+                            <div class="row">
+                                <div class="column col-4 _text prlx">
+                                    <span>Our Philosophy</span>
+                                </div>
+                                <div class="column col-8 _text prlx">
+                                    <span class="left-fix">Furniture That Lasts</span>
+                                    <p class="bigText prlx">Modern &amp;<br> Liveable,<br> Comfortable<br> &amp; Stylish</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="carousel-cell" style="background: url(/images/home/4.jpg); background-size:cover; background-position: 50% 50%;"></div> 
+                    </div>
+                    
+                    <div class="swiper-slide swiper-slide-next">
+                        <div class="carousel-cell" style="background: url(/images/home/1.jpg); background-size:cover; background-position: 50% 50%;"></div>             
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="carousel-cell" style="background: url(/images/home/2.jpg); background-size:cover; background-position: 50% 50%;"></div> 
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="carousel-cell" style="background: url(/images/home/3.jpg); background-size:cover; background-position: 50% 50%;"></div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <!-- featured products -->
+        <section class="featured">
+            <div class="device-content">
+                <div class="row">
+                    <div class="column col-5">
+                        <a href="/furniture/coffee-table">
+                            <figure class="first" data-first="Featured Products">
+                                <div class="image _3x2L">
+                                    <img src="/images/home/2.jpg" alt="">
+                                </div>
+                                <figcaption>
+                                    <p>Coffee table</p>
+                                    <span>9 products</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="column col-1"><span class="fix"></span></div>
+                    <div class="column col-6">
+                        <a href="/furniture/side-table">
+                            <figure class="fixed-right last">
+                                <div class="image _1x1">
+                                    <img src="/images/home/3.jpg" alt="">
+                                </div>
+                                <figcaption>
+                                    <p>Side Table</p>
+                                    <span>7 products</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column col-3">
+                        <a href="/furniture/dining-table">
+                            <figure class="small">
+                                <div class="image _1x1">
+                                    <img src="/images/home/4.jpg" alt="">
+                                </div>
+                                <figcaption>
+                                    <p>Dining Table</p>
+                                    <span>4 products</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="column col-6">
+                        <a href="/furniture/armchair">
+                            <figure class="last mb_right _b">
+                                <div class="image _3x2L">
+                                    <img src="/images/home/5.jpg" alt="">
+                                </div>
+                                <figcaption>
+                                    <p>Armchair</p>
+                                    <span>5 products</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column col-6">
+                        <a href="/furniture/sofa">
+                            <figure>
+                                <div class="image _1x1">
+                                    <img src="/images/home/6.jpg" alt="">
+                                </div>
+                                <figcaption class="w_text">
+                                    <p>Sofa</p>
+                                    <span>2 products</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="column col-3"><span class="fix"></span></div>
+                    <div class="column col-3">
+                        <a href="/furniture/bed">
+                            <figure class="last small mb_right">
+                                <div class="image _1x1">
+                                    <img src="/images/home/7.jpg" alt="">
+                                </div>
+                                <figcaption class="w_text">
+                                    <p>Bed</p>
+                                    <span>17 products</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>           
+            </div>
+        </section>
+        <!-- bottom quote -->
+        <section class="bottom-quote">
+            <div class="device-content dark">
+                <div class="row">
+                    <div class="column col-9"><span class="fix"></span></div>
+                    <div class="column col-3">
+                        <p class="w_text">Modern & Liveable,<br> Stylish & Comfortable</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- footer -->
+        <footer class="w_text">
+            <div class="device-content dark">
+                <div class="row">
+                    <div class="column col-3">
+                        <p>68 France Street South, <br>
+                         Eden Terrace, 1011 Auckland</p>
+                        <p class="copyright not-mobile">© St Clements</p>
+                        <nav class="contact only-mobile">
+                            <a href="mailto:info@stclements.co.nz" target="_blank" class="no-route">info@stclements.co.nz</a>
+                            <a href="tel:+64 21 969 059" target="_blank" class="no-route">+64 21 969 059</a>
+                        </nav>
+                    </div>
+                    <div class="column col-3">
+                        <p>Mon – Fri: 10.00am – 5.30pm<br>
+                         Sat: 10.00am – 4.00pm</p>
+
+                          <p class="copyright only-mobile mb_50">© St Clements 2017</p>
+                         <nav class="mb_50">
+                            <span>Follow</span>
+                            <a href="">Instagram</a>
+                            <a href="">Facebook</a>
+                            <a href="">Subscribe</a> 
+                         </nav>
+                    </div>
+                    <div class="column col-3">
+                        <nav class="contact not-mobile">
+                            <a href="mailto:info@stclements.co.nz" target="_blank" class="no-route">info@stclements.co.nz</a>
+                            <a href="tel:+64 21 969 059" target="_blank" class="no-route">+64 21 969 059</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 </div>
+

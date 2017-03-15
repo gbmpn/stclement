@@ -18,10 +18,24 @@
 
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+*::selection {
+  background: #000;
+  color: #ffffff;
+}
+*::-moz-selection {
+  background: #000;
+  color: #ffffff;
+}
+*::-webkit-selection {
+  background: #000;
+  color: #ffffff;
+}
 
 html,
 body{
-	overflow: hidden;
+	overflow: hidden;800px
+	background: @white;
+	.size(100%, 100vh);
 }
 
 html {
@@ -29,9 +43,213 @@ html {
 }
 
 body {
+	&.is-loading{
+	}
 	&.is-loaded {
-		footer{
-			opacity: 1;
+		header{
+			.visible();
+		}
+		// .loader{
+		// 	transition-delay: .3s;
+		// 	opacity: 0;
+		// }
+	}
+	&.is-home{
+		background: @white;
+		.nav-item[href='/'],
+		.nav-item[href='/home'],
+		#menu nav .nav-item[href='/']{
+			//.nav-current()
+		}
+		.black-bg{
+			//.size(120%, 1400px);
+		    // position: absolute;
+		    // bottom: -355px;
+		    // left: -10%;
+		    // z-index: -1;
+		}
+		.pongTrigger{
+			display: block;
+			pointer-events: all;
+		}
+	}
+	&.is-furniture{
+		// background: @black-bg;
+		// .logo, nav a, span{
+		// 	color: @white;
+		// }
+		.enquireContainer p,
+		form button{
+			color: @white;
+		}
+		background: @white;
+		*{
+				color:@black;
+			}
+		.logo, nav a, span{
+			color: @black;
+		}
+		&.is-black{
+			background: @black-bg;
+			.logo, nav a, span:not(.js-close-enquire){
+				color: @white;
+			}
+			// *{
+			// 	color:@white;
+			// }
+		}
+		&.is-white{
+			background: @white;
+			&.is-search{
+				.logo, nav a, span{
+					color: @white;
+				}
+				header._black{
+					background: @black;
+					&::after{
+						background: @black;
+					}
+				}
+			}
+			.logo, nav a, span{
+				color: @black;
+			}
+			header._black{
+				background: @white;
+				&::after{
+					background: @white;
+				}
+			}
+			section.intro._detail {
+				height: 440px;
+				span{
+					color: @red;
+					font-size: 14px;
+					line-height: 18px;
+					letter-spacing: 0;
+					margin-top: 385px;
+					margin-bottom: 47px;
+					text-transform: capitalize;
+					font-family: 'CircBook';
+					color: @grey-light;
+				}
+			}
+			figure{
+				margin-bottom: 102px;
+			}
+			footer{
+				overflow: auto;
+				background: @white;
+				color: @black;
+				top: 146px;
+				*{
+					color: @black;
+				}
+			}
+		}
+	}
+	
+	&.is-black{
+		background: @black;
+	}
+	&.is-about{
+		background: @white;
+
+		.nav-item[href='/about'],
+		#menu nav .nav-item[href='/about']{
+			.nav-current()
+		}
+	
+		section.intro{
+			height: auto;
+			margin-bottom: -46px;
+		}
+		.hero._detail .description{
+			color: @black;
+		}
+	}
+	&.is-projects{
+		.nav-item[href='/projects'],
+		#menu nav .nav-item[href='/projects']{
+			.nav-current()
+		}
+	
+		section.intro{
+			height: auto;
+			margin-bottom: -46px;
+		}
+		.logo, nav a, span{
+				color: @white;
+			}
+	}
+	&.is-search{
+		background: @black;
+		.logo, nav a, span{
+			color: @white;
+		}
+	}
+	&.is-contact{
+		
+		.nav-item[href='/contact'],
+		#menu nav .nav-item[href='/contact']{
+			.nav-current()
+		}
+		background: @white;
+		.page{
+			*{
+				color:@black;
+			}
+		}
+		
+		.logo, nav a, span{
+			color: @black;
+		}
+		
+		&.is-white{
+			background: @white;
+			&.is-search{
+				.logo, nav a, span{
+					color: @white;
+				}
+				header._black{
+					background: @black;
+					&::after{
+						background: @black;
+					}
+				}
+			}
+			.logo, nav a, span{
+				color: @black;
+			}
+			header._black{
+				background: @white;
+				&::after{
+					background: @white;
+				}
+			}
+			section.intro._detail {
+				height: auto;
+				span{
+					color: @red;
+					font-size: 14px;
+					line-height: 18px;
+					letter-spacing: 0;
+					margin-top: 385px;
+					margin-bottom: 50px;
+				}
+			}
+			figure{
+				margin-bottom: 102px;
+			}
+			footer{
+				overflow: auto;
+				background: @white;
+				color: @black;
+				top: 195px;
+				*{
+					color: @black;
+				}
+			}
 		}
 	}
 }
@@ -53,23 +271,94 @@ View
 		.size(100%,100%);
 		.hidden();
 		text-align: center;
-		transform: translate3d(0,-100px,0);
+		transform: translate3d(0,0px,0);
+		overflow:hidden;
+		
+	   	&.is-black{
+	   		.scrollContainer{
+	   			&::-webkit-scrollbar { 
+		        	background: @black;
+		        }
+		        &::-webkit-scrollbar-track { background: @black; }
+		    	&::-webkit-scrollbar-thumb { background: @white; }
+		    	&::-webkit-scrollbar-thumb:window-inactive { background:  @white; }
+	   		}
+	   	}
+		.scrollContainer{
+			overflow-x: hidden;
+			overflow-y: scroll;
+			-webkit-overflow-scrolling: touch;
+			width:100%;
+			height: 100vh;
+			&::-webkit-scrollbar { 
+		        background: @white; 
+		        width: 0.75%; 
+		        
+		        z-index: 10000;
+		        position: fixed;
+		        top:0;
+		        //left:-1%;
+		        @media @mobile {
+		        	width:0;
+		        }
+		    }
+		    &::-webkit-scrollbar-track { background: @white; }
+		    &::-webkit-scrollbar-thumb { background: @black; }
+		    &::-webkit-scrollbar-thumb:window-inactive { background:  @black; }
+		    .innerScroller{
+		    	width:100.75%;
+		    }
+		}
 	}
+}
+
+
+// SEARCH
+
+.searchContainer{
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	width:100%;
+	height: 100vh;
+	background: @black;
+	top: 0;
+    z-index: 1;
+    position: fixed;
+    .hidden();
+    transition: .3s;
+    &.is-on{
+    	.visible();
+    }
+    section.intro._detail {
+    	height: 70vh;
+    	span{
+			margin-top: 375px;
+			margin-bottom: 100px;
+		}
+	}
+	footer{
+		margin-top: 170px;
+	}
+	&::-webkit-scrollbar { 
+        background: @black;
+        width: 0.75%; 
+        z-index: 10000;
+        position: fixed;
+        top:0;
+    }
+    &::-webkit-scrollbar-track { background: @black; }
+    &::-webkit-scrollbar-thumb { background: @white; }
+    &::-webkit-scrollbar-thumb:window-inactive { background:  @white; }
+    .innerScroller{
+    	width:100.75%;
+    }
 }
 
 /* -----
 Utils
 ----- */
-.vertical-center {
-	display: table;
-	position: relative;
-	.size(100%,100%);
-	
-	.vertical-el {
-		display: table-cell;
-		vertical-align: middle
-	}
-}
+@import "import/_utils.less";
 
 /* -----
 Preloader
@@ -85,6 +374,26 @@ Sub Views
 Misc
 ----- */
 @import "import/_misc.less";
+
+/* -----
+Menu
+----- */
+@import "import/_menu.less";
+
+/* -----
+Menu
+----- */
+@import "import/_carousel.less";
+
+/* -----
+Video
+----- */
+@import "import/_swiper.less";
+
+/* -----
+Filters
+----- */
+@import "import/_filters.less";
 
 /* -----
 Medias Queries

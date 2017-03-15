@@ -1,0 +1,25 @@
+nav.filter{
+	.size(100%, 100px);
+}
+.item{
+	transition: .3s;
+	&.fade{
+		opacity: 0;
+	}
+	&.none{
+		display: none;
+	}
+}
+
+button.is-checked{
+	text-decoration: underline;
+}
+button{
+  outline:none;
+  border:none;
+  margin-bottom: 10px;
+  background: transparent;
+  display: inline-block;
+  position: relative;
+  .vert-center();
+}

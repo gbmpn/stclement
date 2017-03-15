@@ -32,6 +32,51 @@ Basic Mixin'
   opacity: 1;
   visibility: visible;
 } /* .visible(); */
+.vert-center(){
+  top: 50%;
+  transform: translateY(-50%);
+} /*.vert-center() */
+.hrz-center(){
+  left: 50%;
+  transform: translateX(-50%);
+} /*.vert-center() */
+.full-center(){
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+} /*.vert-center() */
+.aspect-ratio(@width, @height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: (@height / @width) * 100%;
+    clear: both;
+  }
+  // > .content {
+  //   position: absolute;
+  //   padding:10px;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   span:before{
+  //     content:"@{width}";
+  //   }
+    
+  //   span:after{
+  //     content:"@{height}";
+  //   }
+  // }
+}/* .aspect-ratio(); */
+.transition(@transition, @easing){
+    -webkit-transition: @transition @easing;
+    -moz-transition: @transition @easing;
+    -ms-transition: @transition @easing;
+    -o-transition: @transition @easing;
+    transition: @transition @easing;
+}/* .transition(); */
 
 /* -----
 Hover

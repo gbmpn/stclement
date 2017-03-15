@@ -13,10 +13,13 @@ Media Queries
 	}
 	
 	.device-content{
-		width: 90%;
+		//width: 90%;
 	}
 	.not-mobile{
 		display: none;
+	}
+	.only-mobile{
+		display: block;
 	}
 }
 
@@ -26,11 +29,16 @@ Media Queries
 	}
 	
 	.device-content{
-		width: 700px;
+		//width: 700px;
+		//width:90%;
 	}
 	.not-mobile{
 		display: none;
 	}
+	.only-mobile{
+		display: block;
+	}
+	
 }
 
 @media @desktop {
@@ -39,11 +47,24 @@ Media Queries
 	}
 
 	.device-content{
-		width: 960px;
+		//width: 960px;
+		//width:90%;
+	}
+	.only-mobile{
+		display: none;
+	}
+}
+@media @desktop-xl {
+	.only-mobile{
+		display: none;
 	}
 }
 
 /* -----
 Retina
 ----- */
-@media @retina {}
+@media @retina {
+	.only-mobile{
+		display: none;
+	}
+}

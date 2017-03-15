@@ -1,16 +1,68 @@
 a {
 	color: @black;
-	text-decoration: underline;
-
-	&:hover {
-		color: @base;
+	text-decoration: none;
+	transition: .1s;
+	
+	&.w_text{
+		color: @white;
 	}
 }
+
+
 
 ul {
 	list-style-type: none;
 }
 
 p {
-	font: @14px/@25px @font;
+	//font: @14px/@25px @font;
 }
+
+*{
+	font-family: 'CircBook';
+	font-size: 14px;
+	line-height: 18px;
+	outline: none;
+	box-shadow: none;
+	border:none;
+}
+
+
+figure{
+	figcaption{
+		p{
+			color: @black;
+		}
+		span{
+			color: @grey-light;
+		}
+		&.w_text{
+			p{
+				color: @white;
+			}
+		}
+	}
+}
+
+.search-block{
+	h4, ul li a{
+		color: @white;
+	}
+}
+.mobile-menu{
+	*, a, span, ul li{
+		color: @white;
+	}
+}
+.bottom-quote p,
+.enquire p{	
+	font-size: 28px;
+	line-height: 32px;
+	text-align: left;
+	font-family: 'CircBook';
+	@media @mobile {
+		font-size: 22px;
+		line-height: 26px;
+	}
+}
+
