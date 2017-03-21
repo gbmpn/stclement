@@ -104,7 +104,7 @@ class Furniture extends Default {
 			var desc = domselect('.description'),
 				d_rect = desc.getBoundingClientRect(),
 				d_top = d_rect.top;
-				console.log(d_top, st);
+				//console.log(d_top, st);
 
 			// if(desc){
 			// 	if(d_top < 450){
@@ -174,8 +174,13 @@ class Furniture extends Default {
 
 		//CAROUSEL
 
-		var swiper = document.querySelector('.swiper-container._detail');
-		var swiper2 = document.querySelector('.swiper-container._detail2');
+		var swiper = document.querySelector('.swiper-container._detail'),
+			swiperLenght = swiper.querySelectorAll('.swiper-slide').length,
+			arrBack = document.querySelector('._detail .swiper-button-back');
+
+		var swiper2 = document.querySelector('.swiper-container._detail2'),
+			swiperLenght2 = swiper2.querySelectorAll('.swiper-slide').length,
+			arrBack2 = document.querySelector('._detail2 .swiper-button-back');
 
 		// var swiper3 = document.querySelector('.swiper-container._detail3'),
 		// 	swiperLenght3 = swiper3.querySelectorAll('.swiper-slide').length,
@@ -186,8 +191,7 @@ class Furniture extends Default {
 		// 	arrBack4 = document.querySelector('._detail4 .swiper-button-back');
 
 		if(swiper){
-			var swiperLenght = swiper.querySelectorAll('.swiper-slide').length,
-				arrBack = document.querySelector('._detail .swiper-button-back')
+				
 			var _swiper = new Swiper(swiper, {	
 	            direction: 'horizontal',
 				slidesPerView: 1,
@@ -204,10 +208,10 @@ class Furniture extends Default {
 
 	        _swiper.on('onSlideChangeStart', function () {
 
-		        if( swiper.activeIndex === swiperLenght - 1){
+		        if( _swiper.activeIndex === swiperLenght - 2){
 					arrBack.classList.remove('hidden');
 					arrBack.addEventListener('click', function(){
-						swiper.slideTo(0, 900);
+						_swiper.slideTo(0, 900);
 						this.classList.add('hidden');
 					})
 		        }
@@ -215,8 +219,6 @@ class Furniture extends Default {
 
 		}
 		if(swiper2){
-			var swiperLenght2 = swiper2.querySelectorAll('.swiper-slide').length,
-				arrBack2 = document.querySelector('._detail2 .swiper-button-back')
 			var _swiper2 = new Swiper(swiper2, {	
 	            direction: 'horizontal',
 				slidesPerView: 1,
@@ -232,11 +234,11 @@ class Furniture extends Default {
 	        });
 
 	        _swiper2.on('onSlideChangeStart', function () {
-
-		        if( swiper2.activeIndex === swiperLenght2 - 1){
+	        	console.log(swiperLenght2, this.activeIndex)
+		        if( _swiper2.activeIndex === swiperLenght2 - 1){
 					arrBack2.classList.remove('hidden');
 					arrBack2.addEventListener('click', function(){
-						swiper2.slideTo(0, 900);
+						_swiper2.slideTo(0, 900);
 						this.classList.add('hidden');
 					})
 		        }

@@ -50,7 +50,7 @@ class Home extends Default {
 				slidesPerView: 1,
 				keyboardControl: true,
 				speed: 1000,
-				loop: true,
+				loop: false,
 				nextButton: '.swiper-button-next',
 				mousewheelControl: false
 	            

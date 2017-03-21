@@ -49,12 +49,7 @@
 	&:hover{
      // cursor: pointer;
     }
-    p{
-    	font-family: 'CircBook';
-	    font-size: 14px;
-	    line-height: 20px;
-	    text-align: left;
-    }
+    
     
 }
 .detail-half-top{
@@ -305,21 +300,21 @@ form{
 			 margin-bottom: 200px;
 		}
 	}
-	input, textarea{
+	input, textarea, select{
 		background: @none;
 		border: @none;
 		color: @black;
 		display: block;
 		float: left;
 		width: 100%;
-		border-bottom: solid 1px @white;
+		border-bottom: solid .1px @white;
 		padding: 10px 0;
 		transition: .3s;
 		text-transform: capitalize;
 		
 		&:focus{
 			color: @grey-light;
-			border-bottom: solid 1px @grey-light;
+			border-bottom: solid .1px @grey-light;
 			opacity: .5;
 			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 			  color: @grey-light;
@@ -347,6 +342,17 @@ form{
 		  color: @white;
 		}
 	}
+	select{
+		color: @white;
+		padding: 10px 0;
+		border-radius: 0px;
+		-webkit-appearance: none; 
+	   -moz-appearance: none;
+	   appearance: none;  	
+	   background-image: url('../images/_blank.png'); 
+	
+	}
+	
 	button{
 		color: @white;	
 		transform: none;

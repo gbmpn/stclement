@@ -82,55 +82,55 @@ class Default {
 
         ////
         //lightbox + carousel
-        var carousel = document.getElementById('carousel')
-        var gallery = document.getElementById('gallery-image')
-        var galleryImages = document.querySelectorAll('.gallery-image'), i;
+        // var carousel = document.getElementById('carousel')
+        // var gallery = document.getElementById('gallery-image')
+        // var galleryImages = document.querySelectorAll('.gallery-image'), i;
 
-        var toCur = document.querySelector('.current')
-        var total = document.querySelector('.total')
+        // var toCur = document.querySelector('.current')
+        // var total = document.querySelector('.total')
 
-        for (i = 0; i < galleryImages.length; ++i) {
+        // for (i = 0; i < galleryImages.length; ++i) {
 
-            (function(index){
-                galleryImages[i].addEventListener('click', function(){
+        //     (function(index){
+        //         galleryImages[i].addEventListener('click', function(){
 
-                    gallery.classList.add('on')
-                    for (i = 0; i < galleryImages.length; ++i) {
-                        //var imgs = document.createElement("img");
-                        // imgs.src = galleryImages[i].dataset.src
-                        var imgs = create({
-                            selector: 'div',
-                            styles: 'cell',
-                            html: `
-                                    <img src=`+ galleryImages[i].dataset.src +`>
+        //             gallery.classList.add('on')
+        //             for (i = 0; i < galleryImages.length; ++i) {
+        //                 //var imgs = document.createElement("img");
+        //                 // imgs.src = galleryImages[i].dataset.src
+        //                 var imgs = create({
+        //                     selector: 'div',
+        //                     styles: 'cell',
+        //                     html: `
+        //                             <img src=`+ galleryImages[i].dataset.src +`>
                                
-                            `
-                        })
-                        carousel.appendChild(imgs)
-                    }
+        //                     `
+        //                 })
+        //                 carousel.appendChild(imgs)
+        //             }
 
-                    var flkty = new Flickity( carousel, {
-                        imagesLoaded: true,
-                        prevNextButtons: true,
-                        pageDots: false,
-                        draggable: true,
-                        wrapAround: true,
-                        initialIndex: index
-                    });
+        //             var flkty = new Flickity( carousel, {
+        //                 imagesLoaded: true,
+        //                 prevNextButtons: true,
+        //                 pageDots: false,
+        //                 draggable: true,
+        //                 wrapAround: true,
+        //                 initialIndex: index
+        //             });
                     
-                    flkty.select( index );
-                    flkty.on( 'select', function() {
-                        var current =  flkty.selectedIndex + 1;
-                    })
+        //             flkty.select( index );
+        //             flkty.on( 'select', function() {
+        //                 var current =  flkty.selectedIndex + 1;
+        //             })
                    
-                    gallery.querySelector('.js-close-fullscreen').addEventListener('click', function(){
-                        gallery.classList.remove('on');
-                        flkty.destroy();
-                        carousel.innerHTML = "";
-                    })
-                })
-            })(i);
-        }
+        //             gallery.querySelector('.js-close-fullscreen').addEventListener('click', function(){
+        //                 gallery.classList.remove('on');
+        //                 flkty.destroy();
+        //                 carousel.innerHTML = "";
+        //             })
+        //         })
+        //     })(i);
+        // }
 
         //SEARCH
         var searchTrigger = document.querySelector('.searchTrigger'),

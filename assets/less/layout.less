@@ -68,10 +68,10 @@ body {
 		    // left: -10%;
 		    // z-index: -1;
 		}
-		.pongTrigger{
-			display: block;
-			pointer-events: all;
-		}
+		// .pongTrigger{
+		// 	display: block;
+		// 	pointer-events: all;
+		// }
 	}
 	&.is-furniture{
 		// background: @black-bg;
@@ -83,7 +83,7 @@ body {
 			color: @white;
 		}
 		background: @white;
-		*{
+		*:not(select, h2){
 				color:@black;
 			}
 		.logo, nav a, span{
@@ -136,12 +136,13 @@ body {
 			}
 			figure{
 				margin-bottom: 102px;
+				margin-bottom: 132px;
 			}
 			footer{
 				overflow: auto;
 				background: @white;
 				color: @black;
-				top: 146px;
+				top: 117px;
 				*{
 					color: @black;
 				}
