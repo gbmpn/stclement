@@ -75,6 +75,7 @@
 						<div class="column col-1">
 							<span class="js-enquire">Enquire</span>
 						</div>
+
 					</nav>
 				</div>
 				<!-- <div class="menu-toggle js-menu-toggle only-mobile">
@@ -349,11 +350,22 @@
 					</div>
 					<div class="column col-12">
 						<form action="">
-							<input type="text" name"firstname" placeholder="First Name">
-							<input type="text" name"lastname" placeholder="Last Name">
-							<input type="text" name"mail" placeholder="Email">
-							<input type="text" name"armchair" placeholder="Armchair">
-							<input type="text" name"joeloveseat" placeholder="Joe Loveseat">
+							<input type="text" name="firstname" placeholder="First Name">
+							<input type="text" name="lastname" placeholder="Last Name">
+							<input type="text" name="mail" placeholder="Email">
+							<select name="productCategory">
+								<option value="4">Coffee Table</option>
+								<option value="5">Side Table</option>
+								<option value="6">Dining Table</option>
+								<option value="7">Sofa</option>
+								<option value="8">Armchair</option>
+								<option value="9">Bed</option>
+								<option value="10">Decor</option>
+							</select>
+							<select name="product" id="productsField">
+								<option value="Joe Chair">Joe Chair</option>
+							</select>
+							<input type="text" name="joeloveseat" placeholder="Joe Loveseat">
 							<textarea name="message" placeholder="Message" rows="4"></textarea>
 							<button>Submit</button>
 						</form>
@@ -426,7 +438,7 @@
 					header.classList.remove('_black')
 					
 					document.body.classList.add('is-search');
-					
+
 				}
 
 
