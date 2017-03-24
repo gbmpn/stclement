@@ -175,11 +175,11 @@ class Furniture extends Default {
 		//CAROUSEL
 
 		var swiper = document.querySelector('.swiper-container._detail'),
-			swiperLenght = swiper.querySelectorAll('.swiper-slide').length,
+			swiperLenght = document.querySelectorAll('.swiper-container._detail .swiper-slide').length,
 			arrBack = document.querySelector('._detail .swiper-button-back');
 
 		var swiper2 = document.querySelector('.swiper-container._detail2'),
-			swiperLenght2 = swiper2.querySelectorAll('.swiper-slide').length,
+			swiperLenght2 = document.querySelectorAll('.swiper-container._detail2 .swiper-slide').length,
 			arrBack2 = document.querySelector('._detail2 .swiper-button-back');
 
 		// var swiper3 = document.querySelector('.swiper-container._detail3'),
@@ -190,7 +190,7 @@ class Furniture extends Default {
 		// 	swiperLenght4 = swiper2.querySelectorAll('.swiper-slide').length,
 		// 	arrBack4 = document.querySelector('._detail4 .swiper-button-back');
 
-		if(swiper){
+		if(swiper && swiperLenght){
 				
 			var _swiper = new Swiper(swiper, {	
 	            direction: 'horizontal',
@@ -218,7 +218,7 @@ class Furniture extends Default {
 		    });
 
 		}
-		if(swiper2){
+		if(swiper2 && swiperLenght2){
 			var _swiper2 = new Swiper(swiper2, {	
 	            direction: 'horizontal',
 				slidesPerView: 1,
